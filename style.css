@@ -3,6 +3,7 @@ h1{
     background:linear-gradient(90deg,black,white);
     text-shadow: #FC0 1px 0 10px;
 }
+
 h2{
     border: solid linear-gradient(90deg,blue white);
     color: white;

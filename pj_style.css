@@ -10,6 +10,7 @@ h2 em{
 td em{
     color: red;
 }
+
 h3{
     color: white;
     border: ridge linear-gradient(90deg,blue white);
