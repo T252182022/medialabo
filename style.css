@@ -1,13 +1,12 @@
 h1{
     color: white;
-    background-color: black;
-    font-family: fantasy;
+    background:linear-gradient(90deg,black,white);
     text-shadow: #FC0 1px 0 10px;
 }
 h2{
-    border: solid darkorange;
-    background-color: darkorange;
-    background:linear-gradient(90deg, darkorange,yellow);
+    border: solid linear-gradient(90deg,blue white);
+    color: white;
+    background:linear-gradient(90deg,blue,rgb(0, 140, 255));
 
 }
 p em{
@@ -23,12 +22,13 @@ a:visited{
 a:hover{
     color: aqua;
 }
-div#naiyou{
-    display: grid;
-	grid-template-columns: 1fr 1fr;
-    padding: 5px;
+div.naiyou {
+    display: grid;                      
+    grid-template-columns: 1fr 2fr 2fr; 
+    grid-auto-rows: 400px;
+    grid-gap: 10px;                     
+    width:100%;
 }
-div#naiyou > div {
-	margin-left: 5px;
-	background-color:#dfdfdf;
+div#naiyou{
+    background:wheat;
 }
