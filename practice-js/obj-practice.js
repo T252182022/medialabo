@@ -8,11 +8,17 @@ let campus = {
 };
 
 let gakka = [
-	{name: "機械システム工学科", ename: "Department of Mechanical Systems Engineering"},
-	{name: "電子システム工学科", ename: "Department of Electronics and Computer Systems"},
-	{name: "情報工学科", ename: "Department of Computer Science"},
-	{name: "デザイン学科", ename: "Department of Design"}
+	{ name: "機械システム工学科", ename: "Department of Mechanical Systems Engineering" },
+	{ name: "電子システム工学科", ename: "Department of Electronics and Computer Systems" },
+	{ name: "情報工学科", ename: "Department of Computer Science" },
+	{ name: "デザイン学科", ename: "Department of Design" }
 ];
 
 //////////////// ここから下にプログラムを書きたそう!
-
+console.log(campus.address);
+for (let n of campus.buildingD) {
+	console.log(n);
+}
+for (let m of gakka) {//はじめに大元の配列gakkaを指定する
+	console.log(m.name);//変数mにはgakkaの要素全てが代入されているので、その中からnameだけを取り出す
+}
