@@ -200,8 +200,51 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
-//１店舗目のコンソール出力
-console.log(data.results.shop[0].name);
+const resultDiv = document.querySelector("div#result");
+let count = 1;
+for (let shop of data.results.shop) {
+  let shopName = document.createElement("h3");
+  shopName.innerHTML = `<em>⭐️検索結果${count++}件目⭐️</em>`;
+  resultDiv.insertAdjacentElement('beforeend', shopName);
+
+  let table = document.createElement("table");
+
+  let tbody = document.createElement("tbody");
+
+  let info = [
+    { label: "店名", value: shop.name },
+    { label: "ジャンル", value: shop.genre.name },
+    { label: "住所", value: shop.address },
+    { label: "予算", value: shop.budget.name },
+    { label: "営業時間", value: shop.open },
+    { label: "最寄駅", value: shop.station_name }
+  ];
+
+  for (let row of info) {
+  let tr = document.createElement("tr");
+
+    let th = document.createElement("th");
+    th.scope = "row";
+    th.textContent = row.label;
+    tr.insertAdjacentElement('beforeend', th);
+
+    let td = document.createElement("td");
+    td.textContent = row.value;
+    tr.insertAdjacentElement('beforeend', td);
+
+    tbody.insertAdjacentElement('beforeend', tr);
+  }
+
+  table.insertAdjacentElement('beforeend', tbody);
+  resultDiv.insertAdjacentElement('beforeend', table);
+}
+
+
+
+
+
+
+/*console.log(data.results.shop[0].name);
 console.log(data.results.shop[0].genre.name);
 console.log(data.results.shop[0].address);
 console.log(data.results.shop[0].budget.name);
@@ -213,5 +256,6 @@ console.log(data.results.shop[1].genre.name);
 console.log(data.results.shop[1].address);
 console.log(data.results.shop[1].budget.name);
 console.log(data.results.shop[1].open);
-console.log(data.results.shop[1].station_name);
+console.log(data.results.shop[1].station_name);*/
+
 

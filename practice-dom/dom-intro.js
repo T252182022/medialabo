@@ -34,7 +34,6 @@ let p = document.createElement('p');				// 新しい p要素を作成
 p.textContent = '七面鳥';							// p要素のテキストを設定
 
 h2.insertAdjacentElement('afterend', p);			// p要素をh2要素の直後に追加
-
 //// 新しい要素の追加（その2）
 let div = document.querySelector('div#sarukani');		// div#sarukani 要素を検索
 
