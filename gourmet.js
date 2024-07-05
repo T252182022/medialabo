@@ -200,6 +200,15 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
+let b = document.querySelector('#print');
+b.addEventListener('click', search);
+
+function search() {
+  let i = document.querySelector('input');
+  let skey = i.value;      
+  console.log('検索キー：' + skey);
+}
+
 const resultDiv = document.querySelector("div#result");
 let count = 1;
 for (let shop of data.results.shop) {
