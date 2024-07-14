@@ -4,6 +4,9 @@ h1{
     text-shadow: #FC0 1px 0 10px;
 }
 
+body{
+    background-image: url(/12001.png);
+}
 h2{
     border: solid linear-gradient(90deg,blue white);
     color: white;
@@ -25,7 +28,7 @@ a:hover{
 }
 div.naiyou {
     display: grid;                      
-    grid-template-columns: 1fr 2fr 2fr; 
+    grid-template-columns: 2fr 2fr 2fr; 
     grid-auto-rows: 400px;
     grid-gap: 10px;                     
     width:100%;
