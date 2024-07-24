@@ -1,12 +1,9 @@
 h1{
     color: white;
-    background:linear-gradient(90deg,black,white);
+    background:linear-gradient(90deg,rgb(123, 122, 120),white);
     text-shadow: #FC0 1px 0 10px;
 }
 
-body{
-    background-image: url(/12001.png);
-}
 h2{
     border: solid linear-gradient(90deg,blue white);
     color: white;
@@ -33,6 +30,6 @@ div.naiyou {
     grid-gap: 10px;                     
     width:100%;
 }
-div#naiyou{
-    background:wheat;
+body{
+    background-color: rgb(209, 253, 252);
 }

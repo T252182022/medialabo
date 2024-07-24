@@ -4,13 +4,9 @@ h1{
     text-shadow: #FC0 1px 0 10px;
     font-size: 300%;
 }
-h2 em{
-    color: red;
+body{
+    background-color: rgb(209, 253, 252);
 }
-td em{
-    color: red;
-}
-
 h3{
     color: white;
     border: ridge linear-gradient(90deg,blue white);

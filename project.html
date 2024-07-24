@@ -4,17 +4,52 @@
 <head>
     <meta charset="utf-8">
     <title>project課題</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <link rel="stylesheet" href="pj_style.css">
     <script src="gourmet.js" defer></script>
 </head>
 
 <body>
-    <label for="skey">検索キー: </label>
-    <input type="text" name="skey" id="skey" size="30">
-    <button id="print">検索</button>
     <h1>〜オススメグルメ検索結果〜</h1>
-    <h2>以下のお店がHITしました！</h2>
+    <h2><em>検索ジャンルを選択して検索ボタンを押して下さい！</em></h2>
+    <label for="keyword">検索ジャンル:</label>
+    <select name="keyword" id="keyword">
+        <option value="">検索キーワードを選択してください！</option>
+        <option value="G001">居酒屋</option>
+        <option value="G002">ダイニングバー・バル</option>
+        <option value="G003">創作料理</option>
+        <option value="G004">和食</option>
+        <option value="G005">洋食</option>
+        <option value="G006">イタリアン・フレンチ</option>
+        <option value="G007">中華</option>
+        <option value="G008">焼肉・ホルモン</option>
+        <option value="G009">アジア・エスニック料理</option>
+        <option value="G010">各国料理</option>
+        <option value="G011">カラオケ・パーティ</option>
+        <option value="G012">バー・カクテル</option>
+        <option value="G013">ラーメン</option>
+        <option value="G014">カフェ・スイーツ</option>
+        <option value="G015">その他グルメ</option>
+        <option value="G016">お好み焼き・もんじゃ</option>
+        <option value="G017">韓国料理</option>
+    </select>
+    <button id="btn">検索！</button>
     <div id="result"></div>
 </body>
 
 </html>
+
+
+
+<!--backupcode!-->
+
+<!--<label for="skey">検索キー: </label>
+<input type="text" name="skey" id="skey" size="30">
+<button id="sendRequest">検索！</button>
+<h1>〜オススメグルメ検索結果〜</h1>
+<h2><em>検索キーワードを入力して検索ボタンを押して下さい！</em></h2>
+<h2>↓検索キーワード↓</h2>
+<p>居酒屋/ダイニングバー・バル/創作料理/和食/洋食/イタリアン・フレンチ/中華/焼肉・ホルモン/アジア・エスニック料理</p>
+<p>各国料理/カラオケ・パーティ/バー・カクテル/ラーメン/カフェ・スイーツ/その他グルメ/お好み焼き・もんじゃ/韓国料理</p>
+<div id="result"></div>
+</body>

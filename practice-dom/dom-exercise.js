@@ -58,6 +58,6 @@ for (let li of ps1) {
 let ul = document.querySelector('ul#location');
 for (let city of data) {
     let li = document.createElement('li');
-    li.textContent =city.name+'　緯度：'+city.lat+'　経度：'+city.lng;
+    li.textContent =city.name+' ... 緯度：'+city.lat+',経度：'+city.lng;
     ul.insertAdjacentElement('beforeend', li);
 } 

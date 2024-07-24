@@ -1,0 +1,141 @@
+body>
+    <form><input></form>
+    <h1>〜オススメグルメ検索結果〜</h1>
+    <h2>以下のお店がHITしました！</h2>
+    <h3><em>⭐️検索結果1件目⭐️</em></h3>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">店名</th>
+                <th scope="col"><p>バグダッドカフェ Bagdadcafe/モータウン MOTOWN</p></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">ジャンル</th>
+                <td>居酒屋</td>
+            </tr>
+            <tr>
+                <th scope="row">住所</th>
+                <td>東京都八王子市明神町４-6-12　ホテル・ザ・ビー八王子（旧八王子プラザホテル）2F</td>
+            </tr>
+            <tr>
+                <th scope="row">予算</th>
+                <td>3001～4000円</td>
+            </tr>
+            <tr>
+                <th scope="row">営業時間</th>
+                <td>月～日、祝日、祝前日: 17:00～21:00 （料理L.O. 20:00 ドリンクL.O. 20:00）</td>
+            </tr>
+            <tr>
+                <th scope="row">最寄駅</th>
+                <td>京王八王子</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3><em>⭐️検索結果2件目⭐️</em></h3>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">店名</th>
+                <th scope="col"><p>隠れ家バル Funny&Bouquet</p></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">ジャンル</th>
+                <td>居酒屋</td>
+            </tr>
+            <tr>
+                <th scope="row">住所</th>
+                <td>東京都八王子市東町12-14</td>
+            </tr>
+            <tr>
+                <th scope="row">予算</th>
+                <td>2001～3000円</td>
+            </tr>
+            <tr>
+                <th scope="row">営業時間</th>
+                <td>月～日、祝日、祝前日: 17:00～翌5:00 （料理L.O. 翌3:00 ドリンクL.O. 翌4:00）</td>
+            </tr>
+            <tr>
+                <th scope="row">最寄駅</th>
+                <td>八王子</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+let kotae = Math.floor(Math.random() * 10) + 1;
+console.log('答え（デバッグ用）: ' + kotae);
+
+// 入力回数（予想回数）
+let kaisu = 0;
+
+// ボタンを押すとhanteiメソッドを実行する
+let b1 = document.querySelector('#print');
+b1.addEventListener('click', hantei);
+
+
+// ボタンを押した後の処理をする関数 hantei() の定義
+function hantei() {
+    kaisu++;
+    //テキストボックスから入力した値を代入→Stringからintへ変換
+    let i = document.querySelector('input');
+    let n1 = Number(i.value);
+    let yoso = n1;
+    //コンソールに画面と同じ内容を出力
+    console.log(kaisu + "回目の予想:" + yoso);
+    //ページ上に回数、答え、結果を表示する
+    let s5 = document.querySelector('span#kaisu');
+    s5.textContent = kaisu
+    let s6 = document.querySelector('span#answer');
+    s6.textContent = yoso
+    let s7 = document.querySelector('p#result');
+    //入力された予想と答えを比較する
+    if (kaisu<4) {
+        if (yoso === kotae) {
+            s7.textContent = '正解です．おめでとう!';
+        } else if (yoso !== kotae && yoso < kotae && kaisu <= 2) {
+            s7.textContent = 'まちがい．答えはもっと大きいですよ';
+        } else if (yoso !== kotae && yoso > kotae && kaisu <= 2) {
+            s7.textContent = 'まちがい．答えはもっと小さいですよ';
+        } else if (kaisu == 3) {
+            s7.textContent = 'まちがい．残念でした答えは' + kotae + 'です．';
+        } 
+    }else{
+        s7.textContent = '答えは' + kotae + 'でした．すでにゲームは終わっています';
+    }
+    // 課題3-1: 正解判定する
+    // kotae と yoso が一致するかどうか調べて結果を出力
+    // 課題3-1における出力先はコンソール
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>数当てゲーム</title>
+    <script src="kazuate.js" defer></script>
+</head>
+
+<body>
+    <h1>数当てゲーム</h1>
+    <label for="kai">1から10の間の整数: </label>
+    <input type="text" name="kai" id="kai" size="10">
+    <button id="print">回答</button>
+    <p><span id="kaisu">1</span>回目の予想: <span id="answer"></span></p>
+    <p id="result"></p>
+</body>
+
+</html>
+
